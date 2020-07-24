@@ -4,11 +4,11 @@ This script will install dependencies and then install Asterisk 16 on you linux 
 
 i have tested it on Ubuntu 18.04.4 LTS but it should work on other versions too.  
 
-Usage :
+## Usage :
 
 `././Bootstrap_Asterisk.sh`
 
 
-# Links :
+## Links :
 - [http://awaiskhaninfosec.ml](http://awaiskhaninfosec.ml)
 
