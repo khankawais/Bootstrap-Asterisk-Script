@@ -6,7 +6,7 @@ i have tested it on Ubuntu 18.04.4 LTS but it should work on other versions too.
 
 ## Usage :
 
-`././Bootstrap_Asterisk.sh`
+`./Bootstrap_Asterisk.sh`
 
 
 ## Links :
