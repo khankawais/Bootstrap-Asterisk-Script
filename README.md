@@ -1,4 +1,4 @@
-# Bootstrap-Asterisk-Script
+# Bootstrap script for Asterisk
 
 This script will install dependencies and then install Asterisk 16 on you linux machine.  
 
