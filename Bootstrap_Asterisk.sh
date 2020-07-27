@@ -30,9 +30,15 @@ else
         apt install libedit-dev uuid-dev libsqlite3-dev -y
         #contrib/scripts/install_prereq install
         ./configure
-        make && make install && make samples && make config && ldconfig
+        make
+        make install
+        make samples
+        make config
+        ldconfig
 
-        groupadd asterisk && adduser --system --group --home /var/lib/asterisk --no-create-home --gecos "Asterisk PBX" asterisk && usermod -a -G dialout,audio asterisk
+        groupadd asterisk
+        adduser --system --group --home /var/lib/asterisk --no-create-home --gecos "Asterisk PBX" asterisk
+        usermod -a -G dialout,audio asterisk
 
         printf "\n\n#############################################\n## Editing Configuration Files\n#############################################\n\n" && sleep 2
         sed -i 's/#AST_USER=/AST_USER=/g' /etc/default/asterisk
@@ -40,11 +46,12 @@ else
         sed -i 's/;runuser =/runuser =/g' /etc/asterisk/asterisk.conf
         sed -i 's/;rungroup =/rungroup =/g' /etc/asterisk/asterisk.conf
         printf "\n\n#############################################\n## Granting Permissions to the asterisk user\n#############################################\n\n" && sleep 2
-        chown -R asterisk: /var/{lib,log,run,spool}/asterisk /usr/lib/asterisk /etc/asterisk
-        chmod -R 750 /var/{lib,log,run,spool}/asterisk /usr/lib/asterisk /etc/asterisk
+        chown -R asterisk: /var/lib/asterisk /var/log/asterisk /var/run/asterisk /var/spool/asterisk /usr/lib/asterisk /etc/asterisk
+        chmod -R 750 /var/lib/asterisk /var/log/asterisk /var/run/asterisk /var/spool/asterisk /usr/lib/asterisk /etc/asterisk
 
         make install-logrotate
-        systemctl enable asterisk && systemctl start asterisk
+        systemctl enable asterisk
+        systemctl start asterisk
         printf "\n\n#############################################\n## Running Aterisk in Verbose Mode\n#############################################\n\n" && sleep 2
         asterisk -rvvv
 
