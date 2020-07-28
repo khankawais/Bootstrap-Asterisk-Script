@@ -10,6 +10,10 @@ Just download the Bootstrap_Asterisk.sh file and run it.
 
 `./Bootstrap_Asterisk.sh`
 
+## Ansible Playbook :
+
+You can download the `Ansible_Playbook.yaml` file to run it on remote machines with the help of Ansible.
+
 
 ## Links :
 - [http://awaiskhaninfosec.ml](http://awaiskhaninfosec.ml)
