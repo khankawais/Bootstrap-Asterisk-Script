@@ -1,0 +1,9 @@
+# Practice yaml
+	---
+	- name: Run Asterisk Bootscript
+	hosts: "Ubuntu_Hosts"
+	become: true
+	become_method: sudo
+	tasks:
+	- script: /root/Bootstrap_Asterisk.sh
+	...
