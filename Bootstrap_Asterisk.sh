@@ -4,7 +4,7 @@
 # Script to install Asterisk 16 on a Debian distro   #
 ######################################################
 
-# I have only tested this script on Ubuntu 18.04.4 LTS but it should work on other versions too
+# I have only tested this script on Ubuntu 18.04.4 LTS and Ubuntu 20.04 LTS but it should work on other versions too
 
 set -x
 
