@@ -8,7 +8,7 @@
 
 if [ $# -gt 0 ];then
     if [ $1 == "-t" ];then
-    printf "\n  This script has been tested on : \n\n  1 - Ubuntu 18.04.4 LTS \n\n"
+    printf "\n  This script has been tested on : \n\n  1 - Ubuntu 18.04.4 LTS \n  2 - Ubuntu 20.04 LTS\n\n"
     else
     printf "\n\n  Usage : ./Bootstrap_Asterisk.sh -t   -->  This will list the Tested versions of linux with this script\n\n          ./Bootstrap_Asterisk.sh      -->  This will run start the installation process for Astrisk\n\n\n"
     fi
@@ -52,8 +52,8 @@ else
         make install-logrotate
         systemctl enable asterisk
         systemctl start asterisk
-        printf "\n\n#############################################\n## Running Aterisk in Verbose Mode\n#############################################\n\n" && sleep 2
-        asterisk -rvvv
+        #printf "\n\n#############################################\n## Running Aterisk in Verbose Mode\n#############################################\n\n" && sleep 2
+        # asterisk -rvvv
 
     fi
 
